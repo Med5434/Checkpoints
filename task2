@@ -2,7 +2,7 @@ ALGORITHM sum_distinct_elements
 VAR
     set1,set2, : ARRAY_OF INTEGER[];
     sum,i,j : INTEGER :=0 ;
-    equality : BOOLEAN ;
+    dinstinct : BOOLEAN ;
 BEGIN
     FOR i FROM 0 TO set1.length-1 DO
         Read(set1[i])
@@ -11,10 +11,10 @@ BEGIN
         Read(set2[i])
     END_FOR
     FOR i FROM 0 TO set1.length-1 DO
-        equality := True
+        dinstinct := True
         FOR j FROM 0 TO set2.length-1 DO
             IF (set1[i] = set2[j]) THEN
-                equality := False
+                dinstinct := False
             END_IF
             break;
         END_FOR
