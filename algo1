@@ -1,0 +1,17 @@
+ALGORITHM words_counter
+VAR
+    sentence : STRING ;
+    words,vowels,i : INTEGER :=0;
+BEGIN
+    Read(sentence)
+    FOR i FROM 0 TO sentence.length-1 DO
+        IF (sentence[i]=" ") THEN
+            words := words + 1 ;
+        END_IF
+        IF (sentence[i]="a" or sentence[i]="e" or sentence[i]="i" or sentence[i]="o" or sentence[i]="u") THEN
+            vowels := vowels + 1 ;
+        END_IF
+    END_FOR
+    Write(words)
+    Write(vowles)
+END
